@@ -1,58 +1,58 @@
-@import "normalize.css";
+@import 'normalize.css';
 
 body, html {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body, div, span, a, img, h1, h2, h3, h4, h5 {
-  box-sizing: border-box;
-  position: relative;
+    box-sizing: border-box;
+    position: relative;
 
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  flex-shrink: 0;
-  align-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-shrink: 0;
+    align-content: flex-start;
 
-  border: 0 solid black;
-  margin: 0;
-  padding: 0;
+    border: 0 solid black;
+    margin: 0;
+    padding: 0;
 }
 
 * {
-  position: relative;
+    position: relative;
 }
 
 body {
-  background-color: #F7F8FA;
-  /*background-color: #FFFFFF;*/
-  color: #202020;
-  font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 100;
+    background-color: #F7F8FA;
+    /*background-color: #FFFFFF;*/
+    color: #202020;
+    font-family: "Avenir Next", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
 }
 
 h1 {
-  font-size: 64px;
-  font-weight: 100;
+    font-size: 64px;
+    font-weight: 100;
 }
 
 h2 {
-  font-size: 48px;
-  font-weight: 100;
+    font-size: 48px;
+    font-weight: 100;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 100;
+    font-size: 24px;
+    font-weight: 100;
 }
 
 p {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 a {
-  font-weight: 400;
+    font-weight: 400;
 }
 
 /*a:hover {
@@ -61,3 +61,299 @@ a {
   text-decoration: none;
 }
 */
+
+.site {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.site__main {
+    align-self: stretch;
+    flex-grow: 7;
+    flex-basis: 0;
+    flex-direction: row;
+    /*background-color: lightgreen;*/
+}
+
+.site__left-sidebar {
+    align-self: stretch;
+    flex-grow: 0;
+    flex-basis: auto;
+    position: fixed;
+    width: 170px;
+    height: 100%;
+    padding: 30px;
+    font-family: "Microsoft YaHei UI Light";
+}
+
+.site__content {
+    align-self: stretch;
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: 170px;
+    margin-right: 300px;
+    /*background-color: palevioletred;*/
+}
+
+.products {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    /*height: 250px;*/
+    padding: 10px;
+    /*background-color: lightgreen;*/
+}
+
+.product__display {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    border: whitesmoke solid 5px;
+    background-color: white;
+}
+
+.product__display img {
+    width: 100%;
+}
+
+.product__add {
+    width: 20%;
+    height: 20%;
+    padding: 3%;
+    margin: 5% 0;
+    border-radius: 100%;
+    background-color: lightgray;
+}
+
+.product__price {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product__description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+}
+
+.product__name {
+    flex-grow: 1;
+    flex-basis: 0;
+    font-size: 20px;
+    font-family: "Microsoft YaHei UI Light" ;
+}
+
+.product__heart {
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+.site__right-sidebar {
+    align-self: stretch;
+    flex-grow: 3;
+    flex-basis: 0;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(192,207,221,1);
+}
+
+.cart {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.cart__title {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    padding: 15px 30px 30px;
+    background: linear-gradient(rgba(192,207,221,1),rgba(192,207,221,1), rgba(192,207,221,0));
+    font-family: "Microsoft YaHei UI Light";
+}
+
+.cart-item {
+    flex-direction: column;
+    /*height: 150px;*/
+    margin-bottom: 20px;
+    /*background: rgba(0, 255, 0, 0.3);*/
+}
+
+.cart-item:first-child {
+    margin-top: 60px;
+}
+
+.cart-item__top-part {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cart-item__image {
+    flex-grow: 0;
+    flex-basis: 33%;
+    margin: 15px 30px;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.cart-item__image img{
+    width: 100%;
+}
+
+.cart-item__top-part__middle{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.cart-item__title {
+    margin-bottom: 10px;
+    font-family: "Microsoft YaHei UI Light" ;
+    font-size: 20px;
+}
+
+.cart-item__price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart-item__trash {
+    flex-basis: auto;
+    flex-grow: 0;
+    margin: 0 30px;
+}
+
+.adjust-qty {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 15px  30px;
+    width: 33%;
+}
+
+.adjust-qty__button {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+    color: lightgray;
+    line-height: 20px;
+    text-align: center;
+}
+
+.adjust-qty__number {
+    margin: 0 16px;
+}
+
+.cart__bottom__over {
+    position: fixed;
+    bottom: 310px;
+    height: 60px;
+    width: 100%;
+    background: linear-gradient(rgba(192,207,221,0),rgba(192,207,221,1), rgba(192,207,221,1));
+}
+
+.checkout {
+    flex-basis: 310px;
+    flex-grow: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    /*background: rgba(0, 0, 255, 0.3);*/
+    font-family: "Microsoft YaHei UI Light";
+}
+
+.checkout__divider {
+    width: 40%;
+    height: 0px;
+    margin-bottom: 15px;
+    border: saddlebrown solid 1px;
+}
+
+.checkout__coupon-input {
+    align-self: stretch;
+    height: 40px;
+}
+
+.checkout__item {
+    align-self: stretch;
+    flex-direction: row;
+    font-size: 24px;
+    padding: 8px 0;
+    font-family: "Microsoft YaHei UI Light";
+}
+
+.checkout__item__left {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.checkout__amount {
+    flex-basis: auto;
+    flex-grow: 0;
+}
+
+.checkout__btn {
+    align-self: stretch;
+    margin: 0 15px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: cadetblue;
+    font-size: 28px;
+    color: white;
+}
+
+.checkout__btn:focus {
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 950px) {
+    .site__content {
+        margin-right: 40%;
+    }
+
+    .site__right-sidebar {
+        width: 40%;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .site__left-sidebar {
+        display: none;
+    }
+
+    .site__content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .site__right-sidebar {
+        width: 80%;
+        opacity: 0;
+    }
+}
