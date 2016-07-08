@@ -1,0 +1,45 @@
+/**
+ * Created by chenm on 2016/7/8.
+ */
+const React = require("react");
+
+let SiteTitle = require("./SiteTitle");
+let Products = require("./Products");
+let Cart = require("./Cart");
+let Checkout = require("./Checkout");
+
+let App = React.createClass({
+    // `render` 方法将生成 `buyshoes` 网页的 Virtual DOM。
+    render() {
+        return (
+            <div className="site">
+                <div className="bg">
+                    <div className="bg__img">
+                    </div>
+                </div>
+
+                <div className="site__main">
+                    <div className="site__left-sidebar">
+                        <SiteTitle/>
+                    </div>
+
+                    <div className="site__content">
+                        <Products/>
+                    </div>
+                </div>
+
+                <div className="site__right-sidebar">
+                    <Cart/>
+                    <Checkout/>
+                </div>
+
+                <a className="site__right-sidebar-toggle">
+                    <img src="../img/arrow-icon.svg"/>
+                </a>
+
+            </div>
+        );
+    }
+});
+
+module.exports = App;

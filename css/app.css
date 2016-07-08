@@ -219,14 +219,14 @@ a {
 .cart {
   flex-grow: 1;
   flex-basis: 0;
+  overflow: auto;
 }
 
 .cart__content {
-
   flex-grow: 1;
   flex-basis: 0;
   /*height: 100%;*/
-  /*overflow: scroll;*/
+  /*overflow: auto;*/
 }
 
 .cart__title {

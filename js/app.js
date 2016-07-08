@@ -1,6 +1,6 @@
 function makeCartScrollNicely() {
   var cart = document.querySelector(".cart__content");
-  Ps.initialize(cart);
+  // Ps.initialize(cart);
 }
 
 function addSidebarToggle() {
